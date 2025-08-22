@@ -111,10 +111,7 @@ package-dir = { "" = "src" }
 where = ["src"]
 
 [project.entry-points.'nomad.plugin']
-
-
-
-app_entry_point = "oasis_optimal_footer_pages.apps:app_entry_point"
+oasis_optimal_footer_pages = "oasis_optimal_footer_pages.apis:oasis_optimal_footer_pages"
 
 [tool.cruft]
 # Avoid updating workflow files, this leads to permissions issues
