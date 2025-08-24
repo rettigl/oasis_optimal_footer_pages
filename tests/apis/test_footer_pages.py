@@ -7,9 +7,11 @@ def test_importing_api():
 
     assert oasis_optimal_footer_pages.name == 'oasis_optimal_footer_pages'
 
+
 def test_static_files_serving():
     from oasis_optimal_footer_pages.apis import oasis_optimal_footer_pages
+
     app = oasis_optimal_footer_pages.load()
     client = TestClient(app)
-    response = client.get("/static/terms.html")
+    response = client.get('/static/terms.html')
     assert response.status_code == 200
