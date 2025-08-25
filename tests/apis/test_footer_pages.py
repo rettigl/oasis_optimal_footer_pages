@@ -1,3 +1,4 @@
+import pytest
 from fastapi.testclient import TestClient
 
 
@@ -7,14 +8,13 @@ def test_importing_api():
 
     assert oasis_optimal_footer_pages.name == 'oasis_optimal_footer_pages'
 
+HTTP_OK = 200
 
-import pytest
-
-@pytest.mark.skip(reason="Skipping static files serving test temporarily")
+@pytest.mark.skip(reason='Skipping static files serving test temporarily')
 def test_static_files_serving():
     from oasis_optimal_footer_pages.apis import oasis_optimal_footer_pages
 
     app = oasis_optimal_footer_pages.load()
     client = TestClient(app)
     response = client.get('/static/terms.html')
-    assert response.status_code == 200
+    assert response.status_code == HTTP_OK
