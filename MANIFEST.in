@@ -1,2 +1,2 @@
 recursive-include * nomad_plugin.yaml
-graft src/oasis_optimal_footer_pages/example_uploads
+graft src/oasis_optimal_footer_pages/apis
